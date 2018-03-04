@@ -15,10 +15,16 @@ def continue_crawl(search_history, target_url, max_step=25):
         return True
 
 def find_first_link(url):
-    # get html from url using requests library
-    # feed the html in BeautifulSoup
-    # find the first link in the article
-    # return the first link as a string, or return None if there is no link
+    response = requests.get(url)
+    html = response.text
+    soup = BeautifulSoup(html, 'html.parser')
+
+    # TODO: find the first link in the article, or set to null if
+    # there is no link in the article
+    article_link = "a url, or None"
+
+    if article_link:
+        return article_link
 
 article_chain = []
 
