@@ -1,4 +1,6 @@
 import time
+import requests
+from bs4 import BeautifulSoup
 
 def continue_crawl(search_history, target_url, max_step=25):
     """A function that checks if crawl should continue or stop based on given args
@@ -11,6 +13,12 @@ def continue_crawl(search_history, target_url, max_step=25):
         return False
     else:
         return True
+
+def find_first_link(url):
+    # get html from url using requests library
+    # feed the html in BeautifulSoup
+    # find the first link in the article
+    # return the first link as a string, or return None if there is no link
 
 article_chain = []
 
